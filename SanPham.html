@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Shop - Home</title>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="module" src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff;
+        }
+        
+        body {
+            animation: bgColor 15s infinite alternate;
+        }
+        
+        .product-card {
+            width: 30%;
+            float: left;
+            margin: 1%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .product-card {
+                width: 100%;
+                float: none;
+                margin: 10px 0;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @keyframes bgColor {
+            0% {
+                background-color: #fffaf0;
+            }
+            25% {
+                background-color: #fef9e7;
+            }
+            50% {
+                background-color: #f9fbe7;
+            }
+            75% {
+                background-color: #e7f9f5;
+            }
+            100% {
+                background-color: #f5e7f9;
+            }
+        }
+        
+        .logo-img {
+            max-height: 40px;
+            max-width: 100px;
+            height: auto;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .logo-img {
+                max-height: 30px;
+            }
+        }
+        
+        .dark-mode {
+            background-color: #121212 !important;
+            color: #fff !important;
+        }
+        
+        .top-banner {
+            background: url('https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1500&q=80') no-repeat center;
+            background-size: cover;
+            height: 200px;
+        }
+        
+        .navbar {
+            background-color: #ff5e99;
+        }
+        
+        .navbar .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        
+        footer {
+            background: #eee;
+            padding: 20px 0;
+            text-align: center;
+            color: #888;
+        }
+        
+        .nav-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 40px 0 20px;
+        }
+        
+        .card:hover {
+            transform: scale(1.03);
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pet-type {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d63384;
+            margin: 40px 0 20px;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pet-tag {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        
+        .dog {
+            background: #ff7f50;
+        }
+        
+        .cat {
+            background: #ba55d3;
+        }
+        
+        .card-img-top {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 auto;
+            padding-top: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cat-breeds-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0 30px;
+        }
+        
+        .cat-breed {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+        
+        .cat-breed img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .breed-label {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            font-size: 13px;
+            padding: 0 5px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .new-tag {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: green;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-banner"></div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logo" class="logo-img d-inline-block align-text-top me-2">
+            <a class="navbar-brand text-white fw-bold" href="#">Pets Shop</a>
+            <div class="d-flex align-items-center">
+                <span class="text-black me-2">Ngôn ngữ:</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/197/197473.png" alt="VN Flag" style="width: 24px; height: auto;">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="TrangChu.html"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="SanPham.html"><i class="fa-solid fa-paw"></i> Thú cưng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="PhuKien.html"><i class="fa-solid fa-bone"></i> Phụ Kiện Thú Cưng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DangNhap.html"><i class="fa-solid fa-user"></i> Đăng Nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LienHe.html"><i class="fa-solid fa-phone"></i> Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <button onclick="document.body.classList.toggle('dark-mode')" class="btn btn-danger">Chuyển màu nền (tối <i class="fa-solid fa-moon text-black"></i>/sáng <i class="bi bi-brightness-high-fill"></i>)</button>
+
+    <div class="container d-flex justify-content-between align-items-center py-3" style="background-color: #ffe6f0; border-radius: 10px; margin-top: 20px;">
+        <form class="d-flex" style="max-width: 400px; flex: 1;">
+            <input class="form-control me-2" type="search" placeholder="Tìm thú cưng..." aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="text-start mb-2">
+            <label for="sort" class="me-2">Sắp xếp:</label>
+            <select id="sort" class="form-select w-auto d-inline-block">
+              <option>Mới nhất</option>
+              <option>Giá tăng dần</option>
+              <option>Giá giảm dần</option>
+            </select>
+        </div>
+        <div class="position-relative">
+            <a href="GioHang.html" class="btn btn-outline-dark">
+                <i class="fas fa-shopping-cart"></i> Giỏ Hàng
+            </a>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            5
+          </span>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <h1 class="section-title">Các Giống Chó Của Chúng Tôi</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <a href="Poodle.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/pdw.jpg" class="card-img-top d-flex" alt="Poodle">
+                        <div class="new-tag">NEW</div>
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Poodle</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ChowChow.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/cc.png" class="card-img-top" alt="Chow Chow">
+                        <div class="new-tag">NEW</div>
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Chow Chow</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Samoyed.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/sm.jpg" class="card-img-top" alt="Samoyed">
+                        <div class="new-tag">NEW</div>
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Samoyed</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Alaska.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/alk.jpg" class="card-img-top" alt="Alaska">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Alaska</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Labrador.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/lbd.jpg" class="card-img-top" alt="Labrador">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Labrador</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Golden.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/gd.jpg" class="card-img-top" alt="Golden">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Golden</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Chihuahua.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/chh.jpg" class="card-img-top" alt="Chihuahua">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Chihuahua</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Corgi.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/cg.jpg" class="card-img-top" alt="Corgi">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Corgi Chân Ngắn</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Pug.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/pg.jpg" class="card-img-top" alt="Pug">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Pug Mặt Xệ</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Becgie.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/bg.jpg" class="card-img-top" alt="Becgie">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Becgie Đức</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Akita.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/akt.jpg" class="card-img-top" alt="Akita">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Akita</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Beagle.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/beagle.jpg" class="card-img-top" alt="Beagle">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Beagle</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Bull.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/bullPhap.jpg" class="card-img-top" alt="Bull">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Bull Pháp</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="PhocHuou.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/phochuou.jpg" class="card-img-top" alt="Phốc">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Phốc Hươu</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="LapXuong.html">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/lx.png" class="card-img-top" alt="Border Collie">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Lạp Xưởng</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/hsk.png" class="card-img-top" alt="Husky">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Husky</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/bl.jpg" class="card-img-top" alt="Bully">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Bully</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/ck.jpg" class="card-img-top" alt="Pitbull">
+                        <div class="card-body text-center"><span class="pet-tag dog">Dog</span>
+                            <h5 class="card-title">Cocker</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <h1 class="section-title mt-5">Các Giống Mèo Của Chúng Tôi</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/mald.jpg" class="card-img-top" alt="">
+                        <div class="new-tag">NEW</div>
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Mèo Anh Lông Dài</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/maln.jpg" class="card-img-top" alt="">
+                        <div class="new-tag">NEW</div>
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Mèo Anh Lông Ngắn</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/sphynx.jpg" class="card-img-top" alt="">
+                        <div class="new-tag">NEW</div>
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Sphynx - Mèo Ai Cập</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/mun.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">MunchKin</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/scottish.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Scottish Fold</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/bengal.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Bengal</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/ragdoll.webp" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Ragdoll</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/himalaya.webp" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Himalaya</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="images/batu.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Ba Tư</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col meo-muop">
+                    <div class="card h-100">
+                        <img src="images/muop.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Mèo Mướp</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col meo-muop">
+                    <div class="card h-100">
+                        <img src="images/Tamthe.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Mèo Tam Thể</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="col meo-muop">
+                    <div class="card h-100">
+                        <img src="images/Vang.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center"><span class="pet-tag dog">Cat</span>
+                            <h5 class="card-title">Mèo Vàng Lai</h5>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <h2 style="text-align: center; font-size: 28px; margin-top: 20px;">
+        CÁC GIỐNG MÈO CẢNH PHỔ BIẾN
+    </h2>
+
+    <div style="text-align: right; margin: 0 20px 20px 0;">
+        <a href="#" style="text-decoration: none; font-weight: bold; color: #007bff;">Xem thêm ></a>
+    </div>
+
+    <div class="cat-breeds-container">
+
+        <div class="cat-breed">
+            <img src="images/tron1.jpg" alt="Mèo Anh Lông Dài">
+            <span class="breed-label">MÈO ANH LÔNG DÀI</span>
+        </div>
+
+        <div class="cat-breed">
+            <img src="images/tron2.jpg" alt="Mèo Anh Lông Ngắn">
+            <span class="breed-label">MÈO ANH LÔNG NGẮN</span>
+        </div>
+
+        <div class="cat-breed">
+            <img src="images/tron3.jpg" alt="Mèo Munchkin">
+            <span class="breed-label">MÈO MUNCHKIN</span>
+        </div>
+
+        <div class="cat-breed">
+            <img src="images/tron4.jpg" alt="Mèo Scottish Fold">
+            <span class="breed-label">MÈO SCOTTISH FOLD</span>
+        </div>
+
+        <div class="cat-breed">
+            <img src="images/tron5.jpg" alt="Mèo Bengal">
+            <span class="breed-label">MÈO BENGAL</span>
+        </div>
+
+        <div class="cat-breed">
+            <img src="images/tron6.jpg" alt="Mèo Ragdoll">
+            <span class="breed-label">MÈO RAGDOLL</span>
+        </div>
+    </div>
+
+    <footer class="bg-danger text-white mt-5 p-4 text-center">
+        <div class="container">
+            <h5>🐾 PETS SHOP</h5>
+            <p>Địa chỉ:<br>
+                <i class="fa-solid fa-location-dot"></i> Cửa Hàng Miền Nam: 1045 Kha Vạn Cân, Linh Trung, Thủ Đức, Tp.Hcm và Đối diện 27 Bình Phú, Phường 10, Quận 6, Tphcm <br>
+                <i class="fa-solid fa-location-dot"></i> Trại nhân giống MN: Huỳnh Văn Lũy, Thủ Dầu Một, Bình Dương.<br>
+                <i class="fa-solid fa-location-dot"></i> Cửa Hàng Miền Bắc: Số 428 Minh Khai, Hai Bà Trưng, Tp.Hà Nội.<br>
+                <i class="fa-solid fa-location-dot"></i> Trại nhân giống MB: Thôn Đức Hậu, Xã Đức Hòa, Sóc Sơn, Tp.Hà Nội.</p>
+            </p>
+            <p>Điện thoại: 0909 999 999</p>
+            <p>Email: contact@petsshop.vn</p>
+
+            <div class="map-responsive my-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.456166248243!2d106.7008062759063!3d10.776887759229098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efaa08e222f%3A0x6cbff5e2b4a6f3f!2zQ8O0bmcgdmnDqm4gVHLGsOG7nW5nIFTDtG5nIFRIUCBIQ00gLSBDYW8gRGFuZ2UgU2Fp!5e0!3m2!1svi!2s!4v1683458919607!5m2!1svi!2s"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+            </div>
+
+            <p class="mb-0">© 2025 PETS SHOP - All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

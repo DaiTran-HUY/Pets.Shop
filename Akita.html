@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Shop - Home</title>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="module" src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff;
+        }
+        
+        body {
+            animation: bgColor 15s infinite alternate;
+        }
+        
+        .product-card {
+            width: 30%;
+            float: left;
+            margin: 1%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .product-card {
+                width: 100%;
+                float: none;
+                margin: 10px 0;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @keyframes bgColor {
+            0% {
+                background-color: #fffaf0;
+            }
+            25% {
+                background-color: #fef9e7;
+            }
+            50% {
+                background-color: #f9fbe7;
+            }
+            75% {
+                background-color: #e7f9f5;
+            }
+            100% {
+                background-color: #f5e7f9;
+            }
+        }
+        
+        .logo-img {
+            max-height: 40px;
+            max-width: 100px;
+            height: auto;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .logo-img {
+                max-height: 30px;
+            }
+        }
+        
+        .dark-mode {
+            background-color: #121212 !important;
+            color: #fff !important;
+        }
+        
+        .top-banner {
+            background: url('https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1500&q=80') no-repeat center;
+            background-size: cover;
+            height: 200px;
+        }
+        
+        .navbar {
+            background-color: #ff5e99;
+        }
+        
+        .navbar .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        
+        .nav-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .poodle-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .poodle-card {
+            flex: 0 1 calc(33.333% - 40px);
+            box-sizing: border-box;
+            background: #fff0f6;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .poodle-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .poodle-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .poodle-card h3 {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #c1126b;
+        }
+        
+        .price {
+            color: red;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 5px 0;
+        }
+        
+        .add-btn {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: #d63384;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        
+        .code,
+        .stock {
+            font-size: 14px;
+            color: #555;
+            margin: 2px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-banner"></div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logo" class="logo-img d-inline-block align-text-top me-2">
+            <a class="navbar-brand text-white fw-bold" href="#">Pets Shop</a>
+            <div class="d-flex align-items-center">
+                <span class="text-black me-2">Ngôn ngữ:</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/197/197473.png" alt="VN Flag" style="width: 24px; height: auto;">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="TrangChu.html"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="SanPham.html"><i class="fa-solid fa-paw"></i> Thú cưng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="PhuKien.html"><i class="fa-solid fa-bone"></i> Phụ Kiện Thú Cưng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DangNhap.html"><i class="fa-solid fa-user"></i> Đăng Nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LienHe.html"><i class="fa-solid fa-phone"></i> Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h2 style="text-align: center; margin-top: 30px; color: #d63384;">GIỚI THIỆU VỀ CHÓ AKITA INU</h2>
+    <p style="max-width: 800px; margin: 10px auto 30px; text-align: center; font-size: 16px;">
+        Akita Inu – giống chó quý đến từ Nhật Bản – nổi bật với vẻ ngoài oai vệ, bộ lông dày mịn và tính cách điềm tĩnh. Đây là biểu tượng của lòng trung thành và sự kiên định, từng được cả nước Nhật tôn vinh thông qua câu chuyện cảm động về chú chó Hachiko.
+        Akita không chỉ là người bạn trung thành, mà còn rất độc lập, cảnh giác và thích hợp với những chủ nuôi có kinh nghiệm. Nếu bạn yêu thích một chú chó thông minh, tình cảm và mang dáng vẻ quý tộc, thì Akita Inu chính là lựa chọn tuyệt vời cho bạn!
+    </p>
+
+    <div class="poodle-container">
+        <div class="poodle-card">
+            <img src="images/AKT1.jpg" alt="">
+            <h3>Akita Vàng Trắng</h3>
+            <p class="code">Mã SP: AKT001</p>
+            <span class="text-danger fw-bold ms-2">16.000.000đ</span><br>
+            <button class="btn btn-outline-danger"><i class="fas fa-plus"></i> Thêm vào giỏ hàng</button>
+        </div>
+        <div class="poodle-card">
+            <img src="images/AKT2.jpg" alt="">
+            <h3>Akita Trắng</h3>
+            <p class="code">Mã SP: AKT002</p>
+            <span class="text-danger fw-bold ms-2">31.000.000đ</span><br>
+            <button class="btn btn-outline-danger"><i class="fas fa-plus"></i> Thêm vào giỏ hàng</button>
+        </div>
+        <div class="poodle-card">
+            <img src="images/AKT3.jpg" alt="">
+            <h3>Akita Vàng Trắng</h3>
+            <p class="code">Mã SP: AKT003</p>
+            <span class="text-danger fw-bold ms-2">29.000.000đ</span><br>
+            <button class="btn btn-outline-danger"><i class="fas fa-plus"></i> Thêm vào giỏ hàng</button>
+        </div>
+        <div class="poodle-card">
+            <img src="images/AKT4.jpg" alt="">
+            <h3>Akita Vện</h3>
+            <p class="code">Mã SP: AKT004</p>
+            <span class="text-danger fw-bold ms-2">29.000.000đ</span><br>
+            <button class="btn btn-outline-danger"><i class="fas fa-plus"></i> Thêm vào giỏ hàng</button>
+        </div>
+        <div class="poodle-card">
+            <img src="images/AKT5.jpg" alt="">
+            <h3>Akita Vàng Trắng</h3>
+            <p class="code">Mã SP: AKT005</p>
+            <span class="text-danger fw-bold ms-2">34.000.000đ</span><br>
+            <button class="btn btn-outline-danger"><i class="fas fa-plus"></i> Thêm vào giỏ hàng</button>
+        </div>
+        <div class="poodle-card">
+            <img src="images/AKT6.jpg" alt="">
+            <h3>Akita Vàng Trắng</h3>
+            <p class="code">Mã SP: AKT006</p>
+            <span class="text-danger fw-bold ms-2">32.000.000đ</span><br>
+            <button class="btn btn-outline-danger"><i class="fas fa-plus"></i> Thêm vào giỏ hàng</button>
+        </div>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 30px; color: #d63384;">Quyền Lợi Khi Mua Hàng Tại Pets Shop</h2>
+
+    <div class="fw-bold">
+        1. Bảo hành thuần chủng trọn đời.<br><br>2. Bảo hành bệnh truyền nhiễm nguy hiểm ở chó là Care và Parvo 7 ngày đầu về nhà mới. Ngoài ra, quý khách có thể mua thêm gói bảo hiểm sức khỏe 1 năm nếu có nhu cầu. (Thú cưng là động vật sống, nhạy cảm
+        với môi trường sống, thức ăn… bởi vậy hãy chăm sóc theo hướng dẫn của PetHouse hướng dẫn nhé)<br><br>3. Miễn phí vận chuyển toàn quốc (đối với tàu hỏa và xe khách, taxi) – hỗ trợ 50-80% chi phí vận chuyển máy bay.<br><br>4. Tặng kèm phụ kiện cho
+        thú cưng gồm: Dây dắt cún, Vòng cổ, Bát ăn, Bình nước thông minh, Đồ chơi, Lược chải cho bé, Túi vận chuyển cho thú cảnh nhỏ.<br><br>5. Giấy tờ đi kèm: Sổ theo dõi sức khoẻ (sổ tiêm phòng vacxin), hợp đồng mua bán, hướng dẫn chăm sóc, giấy chứng
+        nhận nguồn gốc của trại cung cấp, thiệp cảm ơn.<br><br>6. Giảm giá 10% cho các lần mua thú cưng tiếp theo.<br><br>7. Giảm 20% cho các dịch vụ Spa cắt tỉa trọn đời, giảm 10% dịch vụ trông giữ cún tại cửa hàng. Giảm 5% mua phụ kiện trọn đời.<br>
+        <br>8. Hỗ trợ bảo hiểm sức khỏe 1.000.000 Vnđ (trong trường hợp cún bị ốm và trong thời gian bảo hành theo điều khoản trong hợp đồng mua bán.) 8. Tặng quà tặng trị giá 500.000 Vnđ khi giới thiệu bạn bè mua thú cưng tại Pet House. (Có thể quy đổi
+        thành tiền mặt)<br><br>9. Nói không với chó tàu bệnh, chó thải loại.<br><br>10. Đồng hành cùng khách chăm sóc cún trọn đời.<br><br>11. Hỗ trợ thu mua thú cưng khi sinh sản ra đời con với giá tốt nhất.
+    </div>
+
+    <footer class="bg-danger text-white mt-5 p-4 text-center">
+        <div class="container">
+            <h5>🐾 PETS SHOP</h5>
+            <p>Địa chỉ:<br>
+                <i class="fa-solid fa-location-dot"></i> Cửa Hàng Miền Nam: 1045 Kha Vạn Cân, Linh Trung, Thủ Đức, Tp.Hcm và Đối diện 27 Bình Phú, Phường 10, Quận 6, Tphcm <br>
+                <i class="fa-solid fa-location-dot"></i> Trại nhân giống MN: Huỳnh Văn Lũy, Thủ Dầu Một, Bình Dương.<br>
+                <i class="fa-solid fa-location-dot"></i> Cửa Hàng Miền Bắc: Số 428 Minh Khai, Hai Bà Trưng, Tp.Hà Nội.<br>
+                <i class="fa-solid fa-location-dot"></i> Trại nhân giống MB: Thôn Đức Hậu, Xã Đức Hòa, Sóc Sơn, Tp.Hà Nội.</p>
+            </p>
+            <p>Điện thoại: 0909 999 999</p>
+            <p>Email: contact@petsshop.vn</p>
+
+            <div class="map-responsive my-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.456166248243!2d106.7008062759063!3d10.776887759229098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efaa08e222f%3A0x6cbff5e2b4a6f3f!2zQ8O0bmcgdmnDqm4gVHLGsOG7nW5nIFTDtG5nIFRIUCBIQ00gLSBDYW8gRGFuZ2UgU2Fp!5e0!3m2!1svi!2s!4v1683458919607!5m2!1svi!2s"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+            </div>
+
+            <p class="mb-0">© 2025 PETS SHOP - All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

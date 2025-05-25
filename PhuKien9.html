@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Shop - Home</title>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="module" src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff;
+        }
+        
+        body {
+            animation: bgColor 15s infinite alternate;
+        }
+        
+        .product-card {
+            width: 30%;
+            float: left;
+            margin: 1%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .product-card {
+                width: 100%;
+                float: none;
+                margin: 10px 0;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @keyframes bgColor {
+            0% {
+                background-color: #fffaf0;
+            }
+            25% {
+                background-color: #fef9e7;
+            }
+            50% {
+                background-color: #f9fbe7;
+            }
+            75% {
+                background-color: #e7f9f5;
+            }
+            100% {
+                background-color: #f5e7f9;
+            }
+        }
+        
+        .logo-img {
+            max-height: 40px;
+            max-width: 100px;
+            height: auto;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .logo-img {
+                max-height: 30px;
+            }
+        }
+        
+        .dark-mode {
+            background-color: #121212 !important;
+            color: #fff !important;
+        }
+        
+        .top-banner {
+            background: url('https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1500&q=80') no-repeat center;
+            background-size: cover;
+            height: 200px;
+        }
+        
+        .navbar {
+            background-color: #ff5e99;
+        }
+        
+        .navbar .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        
+        .section-title {
+            color: #ff6f61;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .product-card {
+            border-bottom: 1px dashed #ccc;
+            padding: 15px 0;
+        }
+        
+        .badge-sale {
+            background-color: orange;
+            color: white;
+        }
+        
+        footer {
+            background: #eee;
+            padding: 20px 0;
+            text-align: center;
+            color: #888;
+        }
+        
+        .right-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .new-tag {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: green;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 5px;
+        }
+        
+        .nav-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .pagination a,
+        .pagination span {
+            width: 40px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 38px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+        
+        .pagination .active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        .btn-pink {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            transition: background 0.3s ease;
+        }
+        
+        .btn-pink:hover {
+            background-color: #d81b60;
+        }
+        
+        .accessory-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-banner"></div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <img src="images/logo.jpg" alt="Logo" class="logo-img d-inline-block align-text-top me-2">
+            <a class="navbar-brand text-white fw-bold" href="#">Pets Shop</a>
+            <div class="d-flex align-items-center">
+                <span class="text-black me-2">Ngôn ngữ:</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/197/197473.png" alt="VN Flag" style="width: 24px; height: auto;">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="TrangChu.html"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="SanPham.html"><i class="fa-solid fa-paw"></i> Thú cưng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="PhuKien.html"><i class="fa-solid fa-bone"></i> Phụ Kiện Thú Cưng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DangNhap.html"><i class="fa-solid fa-user"></i> Đăng Nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LienHe.html"><i class="fa-solid fa-phone"></i> Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tiêu đề -->
+    <div class="container text-center my-4">
+        <h2 class="fw-bold text-danger">Phụ Kiện Dành Cho Thú Cưng</h2>
+        <p class="text-muted">Chọn lựa phụ kiện chất lượng cho thú cưng yêu của bạn!</p>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center g-4">
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm accessory-card">
+                    <img src="images/tieuhoa1.jpg" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cỏ mèo tươi</h5>
+                        <p class="text-danger fw-bold">10.000.000đ</p>
+                        <button class="btn btn-pink">
+                  <i class="fas fa-plus"></i> Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm accessory-card">
+                    <img src="images/tieuhoa2.jpg" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cỏ mèo khô</h5>
+                        <p class="text-danger fw-bold">9.000.000đ</p>
+                        <button class="btn btn-pink">
+                  <i class="fas fa-plus"></i> Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm accessory-card">
+                    <img src="images/tieuhoa3.jpg" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sữa dành cho mèo</h5>
+                        <p class="text-danger fw-bold">3.000.000đ</p>
+                        <button class="btn btn-pink">
+                  <i class="fas fa-plus"></i> Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm accessory-card">
+                    <img src="images/tieuhoa4.jpg" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sữa dành cho chó</h5>
+                        <p class="text-danger fw-bold">9.000.000đ</p>
+                        <button class="btn btn-pink">
+                  <i class="fas fa-plus"></i> Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm accessory-card">
+                    <img src="images/tieuhoa5.jpg" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sữa tắm trị ve cao cấp</h5>
+                        <p class="text-danger fw-bold">1.000.000đ</p>
+                        <button class="btn btn-pink">
+                  <i class="fas fa-plus"></i> Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm accessory-card">
+                    <img src="images/tieuhoa6.jpg" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sữa tắm trị ve</h5>
+                        <p class="text-danger fw-bold">500.000đ</p>
+                        <button class="btn btn-pink">
+                  <i class="fas fa-plus"></i> Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="PhuKien8.html">&#10094;</a>
+        <a href="PhuKien.html">1</a>
+        <a href="PhuKien1.html">2</a>
+        <a href="PhuKien2.html">3</a>
+        <a href="PhuKien3.html">4</a>
+        <span>...</span>
+        <a href="PhuKien6.html">7</a>
+        <a href="PhuKien7.html">8</a>
+        <a href="PhuKien8.html">9</a>
+        <a href="PhuKien9.html" class="active">10</a>
+    </div>
+
+    <footer class="bg-danger text-white mt-5 p-4 text-center">
+        <div class="container">
+            <h5>🐾 PETS SHOP</h5>
+            <p>Địa chỉ:<br>
+                <i class="fa-solid fa-location-dot"></i> Cửa Hàng Miền Nam: 1045 Kha Vạn Cân, Linh Trung, Thủ Đức, Tp.Hcm và Đối diện 27 Bình Phú, Phường 10, Quận 6, Tphcm <br>
+                <i class="fa-solid fa-location-dot"></i> Trại nhân giống MN: Huỳnh Văn Lũy, Thủ Dầu Một, Bình Dương.<br>
+                <i class="fa-solid fa-location-dot"></i> Cửa Hàng Miền Bắc: Số 428 Minh Khai, Hai Bà Trưng, Tp.Hà Nội.<br>
+                <i class="fa-solid fa-location-dot"></i> Trại nhân giống MB: Thôn Đức Hậu, Xã Đức Hòa, Sóc Sơn, Tp.Hà Nội.</p>
+            </p>
+            <p>Điện thoại: 0909 999 999</p>
+            <p>Email: contact@petsshop.vn</p>
+
+            <div class="map-responsive my-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.456166248243!2d106.7008062759063!3d10.776887759229098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efaa08e222f%3A0x6cbff5e2b4a6f3f!2zQ8O0bmcgdmnDqm4gVHLGsOG7nW5nIFTDtG5nIFRIUCBIQ00gLSBDYW8gRGFuZ2UgU2Fp!5e0!3m2!1svi!2s!4v1683458919607!5m2!1svi!2s"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+            </div>
+
+            <p class="mb-0">© 2025 PETS SHOP - All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
